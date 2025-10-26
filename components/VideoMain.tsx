@@ -6,6 +6,7 @@ const VideoMain = () => {
         autoPlay={true}
         loop={true}
         muted={true}
+        preload="auto"
         className="w-full my-15 rounded-2xl"
       />
     </div>
