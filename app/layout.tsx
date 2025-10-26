@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     siteName: "ChattakhupK Portfolio",
     images: [
       {
-        url: "/preview.png",
+        url: "https://portfolio-official-liart.vercel.app/preview.png",
         width: 1200,
         height: 630,
       },
