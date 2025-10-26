@@ -26,6 +26,10 @@ export function TypographyP({ children }: { children: React.ReactNode }) {
   return <p className="leading-7 [&:not(:first-child)]:mt-6">{children}</p>;
 }
 
+export function TypographyP2({ children }: { children: React.ReactNode }) {
+  return <p className="leading-7">{children}</p>;
+}
+
 export function TypographyMuted({ children }: { children: React.ReactNode }) {
   return <p className="text-muted-foreground text-sm">{children}</p>;
 }

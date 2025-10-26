@@ -31,7 +31,7 @@ const Hero = () => {
           variant={"outline"}
           className="rounded-full mt-5 cursor-pointer"
         >
-          ดูรายละเอียด
+          ช่องทางติดต่อ
         </Button>
       </div>
     </header>
