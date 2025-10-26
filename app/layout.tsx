@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     siteName: "ChattakhupK Portfolio",
     images: [
       {
-        url: "https://i.ibb.co/hxLDXtVT/Screenshot-2025-10-26-072158.png",
+        url: "/preview.png",
         width: 1200,
         height: 630,
       },
