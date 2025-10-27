@@ -1,12 +1,20 @@
-import React from "react";
+"use client";
+import React, { useEffect } from "react";
 import ContainerBox from "../ContainerBox";
 import { TypographyH2, TypographyH3, TypographyP2 } from "../Typography";
 import Image from "next/image";
 import { FaFacebook, FaInstagram, FaGithub, FaDiscord } from "react-icons/fa";
 import Link from "next/link";
 import { Mail, Phone } from "lucide-react";
+import { useAnimation, Variants, motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
-const soical = [
+interface SocialLink {
+  icon: React.ComponentType<{ className?: string }>;
+  path: string;
+}
+
+const soical: SocialLink[] = [
   {
     icon: FaFacebook,
     path: "https://www.facebook.com/MosT5140",
@@ -26,9 +34,30 @@ const soical = [
 ];
 
 const Footer = () => {
+  const controls = useAnimation();
+  const [ref, inView] = useInView({ threshold: 0.2, triggerOnce: true });
+
+  useEffect(() => {
+    if (inView) controls.start("visible");
+  }, [inView, controls]);
+
+  const variants: Variants = {
+    hidden: { opacity: 0, y: 100 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.9, ease: "easeOut" },
+    },
+  };
+
   return (
-    <div
-      className="mx-auto w-full md:max-w-4/6  text-(--primary-inverse) py-10 rounded-t-[150px]"
+    <motion.div
+    id="contact"
+      ref={ref}
+      initial="hidden"
+      animate={controls}
+      variants={variants}
+      className="mx-auto w-full md:max-w-4/6 text-(--primary-inverse) py-10 rounded-t-[150px]"
       style={{ backgroundColor: "var(--bg-inverse)" }}
     >
       <ContainerBox>
@@ -84,7 +113,7 @@ const Footer = () => {
           </div>
         </div>
       </ContainerBox>
-    </div>
+    </motion.div>
   );
 };
 

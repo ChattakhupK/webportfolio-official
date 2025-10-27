@@ -3,11 +3,15 @@ const VideoMain = () => {
     <div className="w-full mx-auto">
       <video
         src="/qmNVzBBo2CSFLiXgZlEATXcHxYY.mp4"
-        autoPlay={true}
+        autoPlay
         loop={true}
         muted={true}
         preload="auto"
-        className="w-full my-15 rounded-2xl"
+        playsInline
+        disablePictureInPicture
+        controls={false}
+        controlsList="nodownload nofullscreen noremoteplayback"
+        className="w-full my-15 rounded-2xl pointer-events-none select-none"
       />
     </div>
   );
