@@ -44,7 +44,7 @@
 :root {
   --radius: 0.625rem;
   --bg-inverse: oklch(0.145 0 0);
-  --primary-inverse:oklch(0.922 0 0);
+  --primary-inverse: oklch(0.922 0 0);
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
@@ -80,7 +80,7 @@
 
 .dark {
   --bg-inverse: oklch(1 0 0);
-    --primary-inverse:oklch(0.205 0 0);
+  --primary-inverse: oklch(0.205 0 0);
   --background: oklch(0.145 0 0);
   --foreground: oklch(0.985 0 0);
   --card: oklch(0.205 0 0);
@@ -121,4 +121,17 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+.mySwiper .swiper-pagination-bullet {
+  background-color: #ccc;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  opacity: 0.5;
+}
+
+.mySwiper .swiper-pagination-bullet-active {
+  background-color: var(--destructive);
+  opacity: 1;
 }

@@ -4,10 +4,7 @@ import Image from "next/image";
 
 const About = () => {
   return (
-    <section
-      id="about"
-      className="flex flex-col md:flex-row justify-between mt-10 gap-x-5"
-    >
+    <section className="flex flex-col md:flex-row justify-between mt-10 gap-x-5">
       {/* รูปภาพตัวเอง */}
       <div>
         <Image

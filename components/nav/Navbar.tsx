@@ -19,8 +19,8 @@ const Navbar = () => {
         <Image
           src="/logoblack-Photoroom.png"
           alt="Logo Light"
-          width={80}
-          height={80}
+          width={70}
+          height={70}
           className="block dark:hidden"
         />
 
@@ -28,8 +28,8 @@ const Navbar = () => {
         <Image
           src="/logowhite-Photoroom.png"
           alt="Logo Dark"
-          width={80}
-          height={80}
+          width={70}
+          height={70}
           className="hidden dark:block"
         />
         {/* Desktop Menu */}

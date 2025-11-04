@@ -3,11 +3,18 @@ import React, { useEffect } from "react";
 import ContainerBox from "../ContainerBox";
 import { TypographyH2, TypographyH3, TypographyP2 } from "../Typography";
 import Image from "next/image";
-import { FaFacebook, FaInstagram, FaGithub, FaDiscord } from "react-icons/fa";
+import {
+  FaFacebook,
+  FaInstagram,
+  FaGithub,
+  FaDiscord,
+  FaLine,
+} from "react-icons/fa";
 import Link from "next/link";
 import { Mail, Phone } from "lucide-react";
 import { useAnimation, Variants, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { Separator } from "../ui/separator";
 
 interface SocialLink {
   icon: React.ComponentType<{ className?: string }>;
@@ -31,6 +38,10 @@ const soical: SocialLink[] = [
     icon: FaDiscord,
     path: "https://discord.com/users/240118062827831297",
   },
+  {
+    icon: FaLine,
+    path: "https://line.me/ti/p/8AR8kZeWYy",
+  },
 ];
 
 const Footer = () => {
@@ -52,45 +63,25 @@ const Footer = () => {
 
   return (
     <motion.div
-    id="contact"
+      id="contact"
       ref={ref}
       initial="hidden"
       animate={controls}
       variants={variants}
-      className="mx-auto w-full md:max-w-4/6 text-(--primary-inverse) py-10 rounded-t-[150px]"
+      className="w-full text-(--primary-inverse) py-5"
       style={{ backgroundColor: "var(--bg-inverse)" }}
     >
       <ContainerBox>
-        {/* โลโก้ */}
-        <div className="flex justify-center -mt-10 mb-9">
-          {/* โลโก้โหมดสว่าง */}
-          <Image
-            src="/logowhite-Photoroom.png"
-            alt="Logo Light"
-            width={80}
-            height={80}
-            className="block dark:hidden"
-          />
-          {/* โลโก้โหมดมืด */}
-          <Image
-            src="/logoblack-Photoroom.png"
-            alt="Logo Dark"
-            width={80}
-            height={80}
-            className="hidden dark:block"
-          />
-        </div>
         {/* การติดต่อ */}
-        <div className="flex space-y-10 flex-col md:flex-row gap-x-10 justify-center items-start px-10">
+        <div className="mx-auto flex max-w-4xl flex-col md:flex-row space-y-10 gap-x-10 justify-between items-start px-10 my-5 md:mb-0">
+          {/* contact */}
           <div className="max-w-lg">
-            <div className="text-center md:text-start">
-              <TypographyH2>ช่องทางการติดต่อ</TypographyH2>
-            </div>
+            <TypographyH3>ช่องทางการติดต่อ</TypographyH3>
             <TypographyP2>
               ผมยินดีที่จะรับฟังความเห็นจากคุณ
               หรือการรับฟังความคิดเห็นเพื่อนำไปปรับปรุงผลงานของผมให้ดียิ่งขึ้น
             </TypographyP2>
-            <div className="flex flex-col mt-2 space-y-1">
+            <div className="flex font-bold flex-col mt-2 space-y-1">
               <div className="flex items-center">
                 <Mail /> | <TypographyP2>Most5140@hotmail.com</TypographyP2>
               </div>
@@ -98,10 +89,14 @@ const Footer = () => {
                 <Phone /> | <TypographyP2>085-855-4668</TypographyP2>
               </div>
             </div>
-            <div className="flex gap-x-2 text-3xl mt-2">
+          </div>
+          {/* logo social */}
+          <div>
+            <TypographyH3>ช่องทางอื่นๆ</TypographyH3>
+            <div className="flex flex-row gap-x-2 text-2xl mt-2">
               {soical.map((link, index) => (
                 <Link
-                  className="hover:scale-110 duration-500 hover:text-red-700 dark:hover:text-red-300"
+                  className="hover:scale-105 duration-300 hover:text-red-700 dark:hover:text-red-300"
                   key={index}
                   target="_blank"
                   href={link.path}

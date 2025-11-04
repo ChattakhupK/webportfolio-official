@@ -7,6 +7,7 @@ import {
 } from "../Typography";
 import { Button } from "../ui/button";
 import TypingJob from "../TypingJob";
+import Link from "next/link";
 
 const Hero = () => {
   return (
@@ -15,8 +16,8 @@ const Hero = () => {
       <div className="text-start md:w-md">
         <TypographyH2>สวัสดีครับ, ผมฟลุ๊ค</TypographyH2>
         <TypographyP>
-          ผมกำลังค้นหางานในสายงานไอที โดยมีประสบการ์ทำงานจริงมาเกือบปี ถ้าคุณสนใจ
-          ผมสนใจตำแหน่ง <TypingJob />
+          ผมกำลังค้นหางานในสายงานไอที โดยมีประสบการ์ทำงานจริงมาเกือบปี
+          ถ้าคุณสนใจ ผมสนใจตำแหน่ง <TypingJob />
         </TypographyP>
       </div>
 
@@ -26,13 +27,15 @@ const Hero = () => {
           <TypographyMuted>ที่อยู่ปัจจุบัน : จังหวัดอุดรธานี </TypographyMuted>
           <TypographyMuted>พร้อมย้ายทันทีเมื่อได้งาน</TypographyMuted>
         </div>
-        <Button
-          size="default"
-          variant={"outline"}
-          className="rounded-full mt-5 cursor-pointer"
-        >
-          ช่องทางติดต่อ
-        </Button>
+        <Link target="_blank" href={"/Resume.pdf"}>
+          <Button
+            size="default"
+            variant={"outline"}
+            className="rounded-full mt-5 cursor-pointer"
+          >
+            ดาวน์โหลดเรซูเม่
+          </Button>
+        </Link>
       </div>
     </header>
   );

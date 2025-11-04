@@ -5,8 +5,7 @@ interface linksProps {
 
 export const links: linksProps[] = [
   { label: "หน้าแรก", path: "/" },
-  { label: "ประวัติ", path: "#about" },
-  { label: "ผลงาน", path: "/" },
-  { label: "ประสบการณ์", path: "/" },
-  { label: "ติดต่อ", path: "#contact" },
+  { label: "ประสบการณ์", path: "/experience" },
+  { label: "ผลงาน", path: "/performance" },
+  { label: "ติดต่อ", path: "/contact" },
 ];

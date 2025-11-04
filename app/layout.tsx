@@ -64,6 +64,9 @@ export default function RootLayout({
             {children}
           </ContainerBox>
           <Footer />
+          <section className="text-center my-2">
+            © 2025 ChattakhupK All rights reserved.
+          </section>
         </ThemeProvider>
       </body>
     </html>
