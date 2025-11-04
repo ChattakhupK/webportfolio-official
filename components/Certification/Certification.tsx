@@ -40,6 +40,7 @@ const Certification = () => {
               className="overflow-hidden mx-2 flex justify-center items-center"
             >
               <Image
+                priority={true}
                 className="rounded-xl object-cover w-full h-48 border"
                 src={`/certification/${img}`}
                 width={300}

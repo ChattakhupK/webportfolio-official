@@ -46,6 +46,7 @@ const JobCardSection = ({
         {picture.map((pic) => (
           <SwiperSlide key={pic}>
             <Image
+              priority={true}
               alt={pic}
               src={pic}
               width={500}
