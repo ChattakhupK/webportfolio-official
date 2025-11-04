@@ -6,7 +6,7 @@ import LogoSkill from "@/components/LogoSkill";
 import { Separator } from "@/components/ui/separator";
 import VideoMain from "@/components/VideoMain";
 
-export default function Home() {
+export default async function Home() {
   return (
     <ContainerMain>
       <Hero />
