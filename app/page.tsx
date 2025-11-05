@@ -9,17 +9,17 @@ import VideoMain from "@/components/VideoMain";
 
 export default async function Home() {
   return (
-    <ContainerMain>
-      <Hero />
-      <VideoMain />
-      <LogoSkill />
-      <Separator className="my-4" />
-      <div className="relative left-1/2 right-1/2 -mx-[50vw] w-screen bg-muted/30 py-10">
+    <>
+      <ContainerMain>
+        <Hero />
+        <VideoMain />
+        <LogoSkill />
+        <Separator className="my-4" />
         <About />
-      </div>
-      <Separator className="my-4" />
-      <Certification />
-      <SmallJobLists />
-    </ContainerMain>
+        <Separator className="my-4" />
+        <Certification />
+        <SmallJobLists />
+      </ContainerMain>
+    </>
   );
 }

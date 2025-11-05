@@ -6,6 +6,7 @@ import Marquee from "react-fast-marquee";
 import fs from "fs";
 import path from "path";
 import { Button } from "../ui/button";
+import Link from "next/link";
 
 const Certification = () => {
   const imagesDir = path.join(process.cwd(), "public/certification");
@@ -28,7 +29,7 @@ const Certification = () => {
           variant={"outline"}
           className="rounded-full mt-5 cursor-pointer"
         >
-          ดูประกาศนียบัตรทั้งหมด
+          <Link href={"/certification"}>ดูประกาศนียบัตรทั้งหมด</Link>
         </Button>
       </div>
       {/* การ์ดรูปภาพ */}

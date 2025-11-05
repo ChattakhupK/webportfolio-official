@@ -4,7 +4,6 @@ import {
   Item,
   ItemContent,
   ItemDescription,
-  ItemGroup,
   ItemHeader,
   ItemTitle,
 } from "@/components/ui/item";
@@ -12,7 +11,7 @@ import { works } from "@/lib/work";
 import { TypographyH3, TypographyMuted, TypographyP2 } from "../Typography";
 import { Button } from "../ui/button";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Navigation } from "swiper/modules";
+import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import Link from "next/link";

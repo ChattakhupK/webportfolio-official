@@ -10,7 +10,7 @@ import Link from "next/link";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
-  console.log(isOpen);
+  // console.log(isOpen);
 
   return (
     <nav className="fixed top-0 left-0 w-full z-50">

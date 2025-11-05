@@ -12,7 +12,7 @@ const PerformancePage = () => {
       <div className="text-center">
         <TypographyH2>ผลงาน</TypographyH2>
       </div>
-      <div className="my-10 space-y-10">
+      <div className="my-10 space-y-5">
         {works.map((work, index) => (
           <WorkList
             label={work.label}
