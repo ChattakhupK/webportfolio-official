@@ -21,15 +21,17 @@ const WorkList = ({
         <h2 className="text-3xl font-bold">{label}</h2>
         <p className="text-muted-foreground max-w-md">{detail}</p>
         <div className="space-x-2">
-          <Button
-            asChild
-            variant="outline"
-            className="rounded-full px-6 cursor-pointer"
-          >
-            <Link target="_blank" href={github}>
-              โค้ด
-            </Link>
-          </Button>
+          {github === "/" ? null : (
+            <Button
+              asChild
+              variant="outline"
+              className="rounded-full px-6 cursor-pointer"
+            >
+              <Link target="_blank" href={github}>
+                โค้ด
+              </Link>
+            </Button>
+          )}
           {live === "/" ? null : (
             <Button
               asChild

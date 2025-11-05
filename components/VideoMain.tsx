@@ -2,7 +2,7 @@ const VideoMain = () => {
   return (
     <div className="w-full mx-auto">
       <video
-        src="/qmNVzBBo2CSFLiXgZlEATXcHxYY.mp4"
+        src="/vdo/vecteezy_enthusiastic-indian-it-programmer-working-on-desktop_27492250.mp4"
         autoPlay
         loop={true}
         muted={true}
