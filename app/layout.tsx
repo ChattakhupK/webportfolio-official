@@ -27,6 +27,10 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.ico",
   },
+  other: {
+    "google-site-verification": process.env
+      .NEXT_PUBLIC_GOOGLEVERIFICATION as string,
+  },
   openGraph: {
     title: "CK - Portfolio | ChattakhupK",
     description:
