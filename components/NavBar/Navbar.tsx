@@ -3,37 +3,59 @@ import Image from "next/image";
 import { ModeToggle } from "../ModeToggle";
 import { Menu } from "lucide-react";
 import { Button } from "../ui/button";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import SideMenu from "./SideMenu";
 import { links } from "@/lib/links";
 import Link from "next/link";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
-  // console.log(isOpen);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 0);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50">
+    <nav className={`fixed top-0 left-0 w-full z-50`}>
       <div className="max-w-6xl mx-auto flex justify-between items-center p-4">
-        {/* โลโก้โหมดสว่าง */}
-        <Image
-          src="/logoblack-Photoroom.png"
-          alt="Logo Light"
-          width={70}
-          height={70}
-          className="block dark:hidden"
-        />
+        <section>
+          {/* โลโก้โหมดสว่าง */}
+          <Link href="/">
+            <Image
+              src="/logoblack-Photoroom.png"
+              alt="Logo Light"
+              width={70}
+              height={70}
+              className="block dark:hidden"
+            />
+          </Link>
 
-        {/* โลโก้โหมดมืด */}
-        <Image
-          src="/logowhite-Photoroom.png"
-          alt="Logo Dark"
-          width={70}
-          height={70}
-          className="hidden dark:block"
-        />
+          {/* โลโก้โหมดมืด */}
+          <Link href="/">
+            <Image
+              src="/logowhite-Photoroom.png"
+              alt="Logo Dark"
+              width={70}
+              height={70}
+              className="hidden dark:block"
+            />
+          </Link>
+        </section>
+
         {/* Desktop Menu */}
-        <div className="md:flex gap-x-10 items-center backdrop-blur-2xl py-5 px-10 border rounded-full hidden">
+        <div
+          className={`md:flex gap-x-10 items-center backdrop-blur-2xl py-5 px-10 rounded-full hidden
+    border transition-colors duration-300
+    ${
+      scrolled ? "border-gray-300 dark:border-gray-600" : "border-transparent"
+    }`}
+        >
           {links.map((item) => (
             <Link
               key={item.label}

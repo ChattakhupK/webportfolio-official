@@ -1,4 +1,3 @@
-import React from "react";
 import { TypographyH2, TypographyMuted, TypographyP } from "../Typography";
 import { Button } from "../ui/button";
 import TypingJob from "../TypingJob";

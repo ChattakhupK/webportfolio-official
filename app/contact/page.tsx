@@ -1,13 +1,18 @@
 import ContainerMain from "@/components/ContainerMain";
-import { TypographyH2, TypographyMuted } from "@/components/Typography";
+import ProfileForm from "@/components/form";
+import { TypographyH2, TypographyP } from "@/components/Typography";
 
-const ContactPage = () => {
+const ContactPage = async () => {
   return (
     <ContainerMain>
       <TypographyH2>การติดต่อ</TypographyH2>
-      <section className="mt-10 bg-muted/30 rounded-2xl text-center py-10">
-        กำลังพัฒนา
-      </section>
+      <TypographyP>
+        ผมยินดีที่จะรับฟังความเห็นจากคุณ
+        หรือการรับฟังความคิดเห็นเพื่อนำไปปรับปรุงผลงานของผมให้ดียิ่งขึ้น
+        ถ้ามีความสนใจในตัวผมส่งข้อมูลมาทางฟอร์ม
+        หรือติดต่อผ่านเบอร์โทรศัพท์ได้ครับ
+      </TypographyP>
+      <ProfileForm />
     </ContainerMain>
   );
 };

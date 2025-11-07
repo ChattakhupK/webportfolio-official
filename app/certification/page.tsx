@@ -1,4 +1,4 @@
-import SildeCer from "@/components/Certification/SildeCer";
+import CerSection from "@/components/Certification/CerSection";
 import ContainerMain from "@/components/ContainerMain";
 import { TypographyH2 } from "@/components/Typography";
 import fs from "fs";
@@ -24,9 +24,7 @@ const CertificationPage = async () => {
       <div className="text-center">
         <TypographyH2>ประกาศนียบัตร</TypographyH2>
       </div>
-      <SildeCer label={"FUTURESKILL"} images={futureskill} />
-      <SildeCer label={"BORNTODEV"} images={borntodev} />
-      <SildeCer label={"ETC."} images={etc} />
+      <CerSection futureskill={futureskill} borntodev={borntodev} etc={etc} />
     </ContainerMain>
   );
 };
