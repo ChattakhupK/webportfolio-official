@@ -50,7 +50,7 @@ export default function ProfileForm() {
     try {
       const res = await axios.post("/api/send", values);
       console.log(res);
-      if (res.status === 200 && res.statusText === "OK") {
+      if (res.status === 200) {
         toast.success("ส่งข้อความสำเร็จ");
         form.reset();
       } else {
