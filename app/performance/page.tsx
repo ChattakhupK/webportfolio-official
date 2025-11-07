@@ -1,12 +1,9 @@
 import ContainerMain from "@/components/ContainerMain";
 import { TypographyH2 } from "@/components/Typography";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
 import WorkList from "@/components/WorkList/WorkList";
 import { works } from "@/lib/work";
-import Image from "next/image";
 
-const PerformancePage = () => {
+const PerformancePage = async () => {
   return (
     <ContainerMain>
       <div className="text-center">

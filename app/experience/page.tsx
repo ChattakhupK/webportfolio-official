@@ -3,8 +3,7 @@ import JobCardSection from "@/components/JobList/JobCardSection";
 import { TypographyH2, TypographyMuted } from "@/components/Typography";
 import { joblists } from "@/lib/joblists";
 
-const ExperiencePage = async() => {
-
+const ExperiencePage = async () => {
   return (
     <ContainerMain>
       <div className="text-center">

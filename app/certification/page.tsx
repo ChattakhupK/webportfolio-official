@@ -4,7 +4,7 @@ import { TypographyH2 } from "@/components/Typography";
 import fs from "fs";
 import path from "path";
 
-const CertificationPage = () => {
+const CertificationPage = async () => {
   const imagesDir = path.join(process.cwd(), "public/certification");
   const files = fs.readdirSync(imagesDir);
 

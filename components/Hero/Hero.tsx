@@ -1,13 +1,9 @@
 import React from "react";
-import {
-  TypographyH1,
-  TypographyH2,
-  TypographyMuted,
-  TypographyP,
-} from "../Typography";
+import { TypographyH2, TypographyMuted, TypographyP } from "../Typography";
 import { Button } from "../ui/button";
 import TypingJob from "../TypingJob";
 import Link from "next/link";
+import { FaCar } from "react-icons/fa";
 
 const Hero = () => {
   return (
@@ -26,6 +22,10 @@ const Hero = () => {
         <div className="text-end">
           <TypographyMuted>ที่อยู่ปัจจุบัน : จังหวัดอุดรธานี </TypographyMuted>
           <TypographyMuted>พร้อมย้ายทันทีเมื่อได้งาน</TypographyMuted>
+          <TypographyMuted>
+            มีรถยนต์ส่วนตัว
+            <FaCar className="inline align-middle ml-1" />
+          </TypographyMuted>
         </div>
         <Link target="_blank" href={"/Resume.pdf"}>
           <Button
