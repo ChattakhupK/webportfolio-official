@@ -12,7 +12,7 @@ const WorkList = ({
   github,
 }: worksProps) => {
   return (
-    <section className="w-full bg-muted/60 rounded-3xl p-10 flex flex-col md:flex-row items-center justify-between gap-10 scale-95">
+    <section className="w-full bg-muted dark:bg-muted/40 border rounded-3xl p-10 flex flex-col md:flex-row items-center justify-between gap-10 scale-95">
       {/* Left Section */}
       <div className="flex-1 text-left space-y-4">
         <p className="text-xs tracking-widest text-muted-foreground uppercase">

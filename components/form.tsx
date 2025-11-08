@@ -82,7 +82,7 @@ export default function ProfileForm() {
       }}
     >
       <motion.div variants={itemVariants}>
-        <ContainerBox addClassName="max-w-xl mt-10 bg-muted/30 rounded-2xl p-10 text-center">
+        <ContainerBox addClassName="max-w-xl mt-10 bg-muted dark:bg-muted/40 border rounded-2xl p-10 text-center">
           <div className="mb-5">
             <TypographyH3>กรอกข้อมูลติดต่อ</TypographyH3>
           </div>

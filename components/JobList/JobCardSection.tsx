@@ -56,7 +56,7 @@ const JobCardSection = ({
           </SwiperSlide>
         ))}
       </Swiper>
-      <div className="flex flex-col md:flex-row justify-between">
+      <div className="flex flex-col md:flex-row justify-between bg-muted dark:bg-muted/40 p-5 rounded-xl border">
         <div className="flex-1 text-start">
           <TypographyH3>{label}</TypographyH3>
           <TypographyP>รายละเอียดงาน</TypographyP>

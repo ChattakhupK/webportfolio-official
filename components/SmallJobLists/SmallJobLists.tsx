@@ -48,7 +48,11 @@ const SmallJobLists = () => {
       >
         {works.map((work, index) => (
           <SwiperSlide key={index}>
-            <Item key={work.label} variant="outline" className="bg-muted/25">
+            <Item
+              key={work.label}
+              variant="outline"
+              className="bg-muted dark:bg-muted/40 border"
+            >
               <ItemHeader>
                 <Image
                   priority={true}

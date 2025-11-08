@@ -1,3 +1,4 @@
+"use client";
 const VideoMain = () => {
   return (
     <div className="w-full mx-auto">
