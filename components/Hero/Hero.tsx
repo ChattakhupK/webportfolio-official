@@ -12,7 +12,7 @@ const Hero = () => {
         <TypographyH2>สวัสดีครับ, ผมฟลุ๊ค</TypographyH2>
         <TypographyP>
           ผมกำลังค้นหางานในสายงานไอที โดยมีประสบการ์ทำงานจริงมาเกือบปี
-          ถ้าคุณสนใจ ผมสนใจตำแหน่ง <TypingJob />
+          ผมสนใจตำแหน่ง <TypingJob />
         </TypographyP>
       </div>
 
